@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Login</h1>
+    <form id="login-form">
+      <label for="username">Username</label>
+      <input type="text" id="username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" required>
+
+      <button type="submit"  class="login">Login</button>
+      <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+          event.preventDefault();
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+          if (username.trim() !== "" && password.length >=8) {
+            window.location.href = "https://www.google.com";
+          } else {
+            alert("Invalid Credentials");
+          }
+        });
+        </script>
+    </form>
+  </div>
+</body>
+</html>
